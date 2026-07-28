@@ -1,0 +1,8 @@
+Analysis of lama3-1b vs 3b parameters
+
+Observations:
+
+Scaling Efficiency: Increasing the model parameter count by 3x resulted in only a ~17% decrease in generation speed. This suggests the inference process is not currently bound by pure compute capacity, but rather by the memory-bound nature of the decoding phase.
+
+VRAM Scalability: The VRAM usage scaled linearly with parameter count ( 4-bit quantization), confirming that  hardware is well-provisioned for models in the 1B–3B range.
+

@@ -1,0 +1,12 @@
+# Lacking Metrics (The "Professional" Roadmap)If you want to make this documentation look like an industry-standard performance report, you should note that these metrics are currently missing. Adding them later will show significant growth in your engineering skills.
+
+1)Time to First Token (TTFT): 
+ Measured total generation speed, but you didn't measure how long it took to get the first word. This is critical for user-facing applications (chatbots), where users perceive a system as "laggy" if TTFT is high.
+ 
+2)Inter-Token Latency (ITL / TPOT): Measured an average speed. However, ITL measures the consistency of the speed. Is the generation smooth, or does it "stutter" (pause) between tokens?
+
+3)GPU Utilization/Temperature: 
+ No hardware stress measurement done on GPU. Does the GPU hit 90% utilization or stay at 40%? Knowing this helps determine if your inference engine is "starving" the GPU of work.
+
+ 4)Percentile Analysis (p95/p99):
+ Averages can be misleading. If my model generates 990 tokens at 50 TPS but "hangs" on the last 10 tokens, the average stays high, but the user experience is poor. p99 metrics track these "worst-  case" performance spikes.  
