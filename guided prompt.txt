@@ -1,0 +1,37 @@
+ok see Step 5: OPTIMIZE
+        Apply one
+optimization at a time
+        Measure after
+each change
+        vLLM →
+quantization → batching 
+see what i am thinking is that inference have 2 phases prefill and decode and i am going to use this opmtization 
+
+optimization i am going to apply:-
+KV cache
+prefill
+decode
+VRAM
+quantization
+batching
+flash attention
+speculative decoding
+model performance 
+tail latencies optimization based of users 
+
+
+
+/home/ayush/vllmfile.py
+
+
+
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python "/home/ayush/vllmfile.py"
+
+python vllmfile.py --users 1
+python vllmfile.py --users 4
+python vllmfile.py --users 8
+python vllmfile.py --users 16
+
+
+
+no get the results of both models with opmtizaiton names first and then comparision table then key insights and takeaways  and then trade offs this was my format 
